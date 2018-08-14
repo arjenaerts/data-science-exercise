@@ -11,7 +11,6 @@ Script that makes predictions for a set of customer-time pairs using the model o
 data = pd.read_csv('usage_test.csv')
 data['datetime'] = pd.to_datetime(data['datetime'])
 data = data.set_index(['id', 'datetime'])
-print(data)
 
 # load pickled files with samples 
 with open('local_samples.pkl', 'rb') as f:
